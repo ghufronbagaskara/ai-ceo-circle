@@ -15,10 +15,12 @@ import Faq from "@/components/landing/sections/Faq";
 import FinalCta from "@/components/landing/sections/FinalCta";
 import Footer from "@/components/landing/sections/Footer";
 import CursorLava from "@/components/landing/ui/CursorLava";
+import FixedGrid from "@/components/landing/ui/FixedGrid";
 
 const LandingPage = () => {
   return (
     <main className="relative min-h-screen">
+      <FixedGrid />
       <CursorLava />
       <Navbar />
       <Hero />

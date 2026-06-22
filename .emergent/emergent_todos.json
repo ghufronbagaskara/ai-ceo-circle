@@ -1,26 +1,30 @@
 [
   {
-    "content": "Build Tilt wrapper + AnimatedHeading + CursorLava",
-    "status": "completed"
+    "content": "Spotlight card (onMouseMove gold radial gradient + border mask glow)",
+    "status": "in_progress"
   },
   {
-    "content": "Hero: mouse-parallax rocks + letter-stagger title reveal + 3D depth",
-    "status": "completed"
+    "content": "Cinematic Reveal — duration 1.2 ease [0.16,1,0.3,1], y:50, scale 0.96",
+    "status": "pending"
   },
   {
-    "content": "Service rows: magnetic 3D tilt + big number scaling on hover",
-    "status": "completed"
+    "content": "Abstract Lava/Flow hero — 3 blur-140 animated orbs (gold + navy + magma)",
+    "status": "pending"
   },
   {
-    "content": "Mentor 3D orb + Marquee hover scale/pause",
-    "status": "completed"
+    "content": "Global FixedGrid — 100vh fixed vertical lines border-white/[0.03] z-[-1]",
+    "status": "pending"
   },
   {
-    "content": "Convictions/Problem/Testimonials 3D tilt cards",
-    "status": "completed"
+    "content": "Typography polish — tighter -0.04em + tiny tracked-out 10px labels",
+    "status": "pending"
   },
   {
-    "content": "Test compile & screenshot final result",
-    "status": "completed"
+    "content": "Apply Spotlight to Convictions/Problem/Testimonials/Ecosystem cards",
+    "status": "pending"
+  },
+  {
+    "content": "Screenshot & finalize",
+    "status": "pending"
   }
 ]

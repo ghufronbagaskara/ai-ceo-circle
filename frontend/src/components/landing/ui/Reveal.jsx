@@ -2,15 +2,24 @@ import React from "react";
 import { motion } from "framer-motion";
 
 /**
- * Reveal — scroll-triggered fade + slide with optional rotateX for 3D feel.
+ * Reveal — cinematic scroll-triggered entrance.
+ * Magma/Apple slow-settle: cubic-bezier(0.16, 1, 0.3, 1), 1.2s duration.
+ * Initial: opacity 0, y 50, scale 0.96.
  */
-const Reveal = ({ children, delay = 0, y = 24, x = 0, rotateX = 0, className = "", once = true }) => (
+const Reveal = ({
+  children,
+  delay = 0,
+  y = 50,
+  scale = 0.96,
+  className = "",
+  once = true,
+  duration = 1.2,
+}) => (
   <motion.div
-    initial={{ opacity: 0, y, x, rotateX }}
-    whileInView={{ opacity: 1, y: 0, x: 0, rotateX: 0 }}
+    initial={{ opacity: 0, y, scale }}
+    whileInView={{ opacity: 1, y: 0, scale: 1 }}
     viewport={{ once, margin: "-80px" }}
-    transition={{ duration: 0.85, delay, ease: [0.22, 1, 0.36, 1] }}
-    style={rotateX ? { transformPerspective: 1000, transformStyle: "preserve-3d" } : undefined}
+    transition={{ duration, delay, ease: [0.16, 1, 0.3, 1] }}
     className={className}
   >
     {children}

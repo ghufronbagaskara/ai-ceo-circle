@@ -14,38 +14,43 @@ const Timeline = () => {
         className="py-6 opacity-90"
       />
 
-      <Container className="pt-20 pb-24 md:pt-24 md:pb-32">
+      <Container className="pt-24 pb-28 md:pt-28 md:pb-40">
         <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-12">
           <div className="md:col-span-7">
             <SectionLabel>{TIMELINE.label}</SectionLabel>
-            <Reveal className="mt-6">
-              <h2 className="font-serif text-balance text-[10vw] leading-[0.95] tracking-[-0.035em] text-cream sm:text-[8vw] md:text-[5.8vw] lg:text-[5vw]">
+            <Reveal className="mt-7">
+              <h2
+                className="font-serif text-balance text-[10vw] leading-[0.92] text-cream sm:text-[8vw] md:text-[6vw] lg:text-[5.4vw]"
+                style={{ letterSpacing: "-0.045em" }}
+              >
                 A 6-month{" "}
                 <span className="font-serif-italic text-gradient-lava">mentoring circle</span>
               </h2>
             </Reveal>
           </div>
-          <Reveal delay={0.1} className="md:col-span-5 md:pt-8">
-            <p className="text-[15.5px] leading-relaxed text-cream-soft">{TIMELINE.intro}</p>
+          <Reveal delay={0.1} className="md:col-span-5 md:pt-10">
+            <p className="text-[16px] leading-relaxed text-cream-soft">{TIMELINE.intro}</p>
           </Reveal>
         </div>
 
-        {/* Editorial step rows */}
         <div className="mt-16 flex flex-col">
           {TIMELINE.steps.map((s, i) => (
-            <Reveal key={i} delay={i * 0.06}>
-              <div className="group relative border-t border-hair border-cream-10 py-10 last:border-b md:py-12">
+            <Reveal key={i} delay={i * 0.08}>
+              <div className="group relative border-t border-hair border-cream-10 py-12 last:border-b md:py-14">
                 <div className="grid grid-cols-1 gap-6 md:grid-cols-12 md:gap-10">
                   <div className="md:col-span-3">
                     <div className="flex items-center gap-3">
-                      <span className="relative grid h-2 w-2 place-items-center rounded-full bg-[#ff5d2a] animate-lava-pulse" />
-                      <span className="font-mono text-[10.5px] uppercase tracking-[0.32em] text-cream-dim">
+                      <span className="relative grid h-2 w-2 place-items-center rounded-full bg-[#C9920A] animate-lava-pulse" />
+                      <span className="font-mono text-[10px] uppercase tracking-[0.38em] text-cream-dim">
                         {s.window}
                       </span>
                     </div>
                   </div>
                   <div className="md:col-span-5">
-                    <h3 className="font-serif text-[28px] leading-[1.08] text-cream md:text-[36px]">
+                    <h3
+                      className="font-serif text-[28px] leading-[1.05] text-cream md:text-[38px]"
+                      style={{ letterSpacing: "-0.04em" }}
+                    >
                       {s.title.split(" ").slice(0, -1).join(" ")}{" "}
                       <span className="font-serif-italic text-lava-soft">
                         {s.title.split(" ").slice(-1)[0]}
