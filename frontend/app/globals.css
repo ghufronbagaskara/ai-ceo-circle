@@ -138,20 +138,14 @@ code { font-family: var(--font-jetbrains-mono), monospace; }
     letter-spacing: -0.035em;
   }
 
-  /* Lava gradient text (warm cream → lava red) */
+  /* Lava accent text — solid warm orange */
   .text-gradient-lava {
-    background: linear-gradient(180deg, #f6dfb5 0%, #ff7a3d 55%, #d63a0a 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    color: #ff7a3d;
   }
 
-  /* Cream gradient for primary headlines */
+  /* Cream accent text — solid warm cream */
   .text-gradient-cream {
-    background: linear-gradient(180deg, #ffffff 0%, #f5e8cc 60%, #c9b890 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    color: #efe7d6;
   }
 
   /* Lava glow text shadow */

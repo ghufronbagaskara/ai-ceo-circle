@@ -36,7 +36,7 @@ const Navbar = () => {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       className={`sticky top-0 z-50 transition-colors duration-300 ${
-        scrolled ? "border-b border-hair border-cream-10 bg-[#070e1c]/80 backdrop-blur-xl" : "bg-transparent"
+        scrolled ? "bg-[#070e1c]/80 backdrop-blur-xl" : "bg-transparent"
       }`}
     >
       <Container className="flex h-20 items-center justify-between md:h-24">

@@ -65,7 +65,7 @@ const Program = () => {
                     style={{ transformOrigin: "left center" }}
                   >
                     <span
-                      className="font-serif text-[88px] leading-none text-[#C9920A] md:text-[128px]"
+                      className="font-serif text-[56px] leading-none text-[#C9920A] md:text-[88px] lg:text-[128px]"
                       style={{ letterSpacing: "-0.05em" }}
                     >
                       {String(i + 1).padStart(2, "0")}

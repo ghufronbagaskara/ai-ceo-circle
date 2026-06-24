@@ -32,7 +32,7 @@ const FaqItem = ({ item, isOpen, onToggle, index }) => {
         <motion.span
           animate={{ rotate: isOpen ? 45 : 0 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className={`mt-1 grid h-9 w-9 shrink-0 place-items-center rounded-full border-hair ${
+          className={`mt-1 grid h-11 w-11 shrink-0 place-items-center rounded-full border-hair ${
             isOpen ? "border-[#C9920A]/60 bg-[#C9920A]/10 text-[#C9920A]" : "border-cream-15 text-cream-soft"
           }`}
         >
@@ -59,7 +59,7 @@ const FaqItem = ({ item, isOpen, onToggle, index }) => {
 };
 
 const Faq = () => {
-  const [open, setOpen] = useState(0);
+  const [open, setOpen] = useState(-1);
   return (
     <section id="faq" className="relative z-10 py-28 md:py-40">
       <Container>
@@ -78,7 +78,7 @@ const Faq = () => {
             <p className="text-[14.5px] leading-relaxed text-cream-dim">
               Can’t find your answer? Reach us at{" "}
               <a
-                href="#apply"
+                href="mailto:hello@aiceocircle.com"
                 className="inline-flex min-h-[44px] items-center text-cream underline decoration-cream/30 underline-offset-[4px] hover:text-[#C9920A] hover:decoration-[#C9920A]"
               >
                 hello@aiceocircle.com

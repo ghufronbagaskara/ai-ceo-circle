@@ -10,7 +10,7 @@ import { HERO, STATS_HERO } from "@/components/landing/data";
 
 const Hero = () => {
   return (
-    <section id="top" className="relative isolate overflow-hidden pt-6 pb-24 md:pb-36">
+    <section id="top" className="relative isolate overflow-hidden min-h-[100svh] pt-6 pb-24 md:pb-36">
       <div aria-hidden className="pointer-events-none absolute inset-0 bg-[#070e1c]" />
       <LavaFlowBackdrop />
 

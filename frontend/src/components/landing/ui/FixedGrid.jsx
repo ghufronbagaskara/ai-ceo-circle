@@ -8,7 +8,7 @@ import React from "react";
 const FixedGrid = () => (
   <div
     aria-hidden
-    className="pointer-events-none fixed inset-0 z-[-1]"
+    className="pointer-events-none fixed inset-0 z-[-1] hidden md:block"
     style={{
       backgroundImage:
         "repeating-linear-gradient(90deg, rgba(255,255,255,0.04) 0 1px, transparent 1px 8.3333%)",

@@ -21,10 +21,35 @@ const FinalCta = () => {
     horizon: "q", message: "", consent: false,
   });
 
+  const [errors, setErrors] = useState({});
+
   const onChange = (key) => (e) =>
     setForm((f) => ({ ...f, [key]: e.target.type === "checkbox" ? e.target.checked : e.target.value }));
 
-  const onSubmit = (e) => { e.preventDefault(); setSubmitted(true); };
+  const validateField = (key, value) => {
+    if (key === "email") {
+      if (!String(value).trim()) return "Required";
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) return "Enter a valid email address";
+    }
+    if (["first", "last", "company"].includes(key) && !String(value).trim()) return "Required";
+    return null;
+  };
+
+  const onBlurField = (key) => () => {
+    const error = validateField(key, form[key]);
+    setErrors((prev) => { const next = { ...prev }; if (error) next[key] = error; else delete next[key]; return next; });
+  };
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    const newErrors = {};
+    ["first", "last", "email", "company"].forEach((k) => {
+      const err = validateField(k, form[k]);
+      if (err) newErrors[k] = err;
+    });
+    if (Object.keys(newErrors).length) { setErrors(newErrors); return; }
+    setSubmitted(true);
+  };
 
   return (
     <section id="apply" className="relative z-10 overflow-hidden py-32 md:py-44">
@@ -87,18 +112,18 @@ const FinalCta = () => {
         <Reveal delay={0.2}>
           <div className="relative mt-16">
             {!submitted ? (
-              <form onSubmit={onSubmit} className="grid grid-cols-1 gap-x-12 gap-y-10 border-t border-hair border-cream-10 pt-12 md:grid-cols-2 md:pt-16">
-                <Field label="First name" required>
-                  <input required value={form.first} onChange={onChange("first")} placeholder="Budi" className="input" />
+              <form onSubmit={onSubmit} noValidate className="grid grid-cols-1 gap-x-12 gap-y-10 border-t border-hair border-cream-10 pt-12 md:grid-cols-2 md:pt-16">
+                <Field label="First name" required error={errors.first}>
+                  <input required value={form.first} onChange={onChange("first")} onBlur={onBlurField("first")} placeholder="Budi" className="input" />
                 </Field>
-                <Field label="Last name" required>
-                  <input required value={form.last} onChange={onChange("last")} placeholder="Santoso" className="input" />
+                <Field label="Last name" required error={errors.last}>
+                  <input required value={form.last} onChange={onChange("last")} onBlur={onBlurField("last")} placeholder="Santoso" className="input" />
                 </Field>
-                <Field label="Email" required>
-                  <input required type="email" value={form.email} onChange={onChange("email")} placeholder="budi@perusahaan.com" className="input" />
+                <Field label="Email" required error={errors.email}>
+                  <input required type="email" value={form.email} onChange={onChange("email")} onBlur={onBlurField("email")} placeholder="budi@perusahaan.com" className="input" />
                 </Field>
-                <Field label="Company" required>
-                  <input required value={form.company} onChange={onChange("company")} placeholder="Company name" className="input" />
+                <Field label="Company" required error={errors.company}>
+                  <input required value={form.company} onChange={onChange("company")} onBlur={onBlurField("company")} placeholder="Company name" className="input" />
                 </Field>
                 <Field label="How can we help?" className="md:col-span-2">
                   <textarea rows={3} value={form.message} onChange={onChange("message")}
@@ -179,12 +204,15 @@ const FinalCta = () => {
   );
 };
 
-const Field = ({ label, required, children, className = "" }) => (
+const Field = ({ label, required, children, className = "", error }) => (
   <label className={`flex flex-col gap-1.5 ${className}`}>
     <span className="font-mono text-[10px] uppercase tracking-[0.38em] text-cream-dim">
       {label}{required && <span className="text-[#C9920A]"> *</span>}
     </span>
     {children}
+    {error && (
+      <span className="font-mono text-[10px] tracking-wide text-red-400">{error}</span>
+    )}
   </label>
 );
 
