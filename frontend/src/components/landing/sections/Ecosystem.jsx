@@ -101,6 +101,41 @@ const Ecosystem = () => {
         <Reveal delay={0.15}>
           <p className="mt-12 max-w-3xl text-[16px] leading-relaxed text-cream-soft">{ECOSYSTEM.outro}</p>
         </Reveal>
+
+        {/* Editorial photo — MAXY AI ecosystem in action; replace with real image */}
+        <Reveal delay={0.2} className="mt-10">
+          <div className="relative overflow-hidden rounded-2xl border border-white/[0.06]">
+            <img
+              src="https://picsum.photos/seed/maxy-ai-ecosystem-enterprise/1400/560"
+              alt="MAXY AI ecosystem — enterprise AI transformation in action"
+              className="h-[260px] w-full object-cover md:h-[360px]"
+              loading="lazy"
+              style={{ filter: "saturate(0.55) brightness(0.6)" }}
+            />
+            <div
+              aria-hidden
+              className="absolute inset-0"
+              style={{
+                background:
+                  "linear-gradient(90deg, rgba(7,14,28,0.82) 0%, rgba(7,14,28,0.38) 50%, rgba(31,49,96,0.55) 100%)",
+              }}
+            />
+            <div className="absolute inset-0 flex items-end p-7 sm:p-10 md:p-12">
+              <div className="max-w-xl">
+                <span className="font-mono text-[10px] uppercase tracking-[0.38em] text-[#C9920A]">
+                  Full-stack AI company
+                </span>
+                <p
+                  className="mt-2 font-serif text-[22px] leading-[1.12] text-cream sm:text-[28px]"
+                  style={{ letterSpacing: "-0.03em" }}
+                >
+                  From CEO strategy to talent placement —{" "}
+                  <span className="font-serif-italic text-lava-soft">one ecosystem.</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </Reveal>
       </Container>
     </section>
   );

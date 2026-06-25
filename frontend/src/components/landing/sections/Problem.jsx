@@ -75,6 +75,35 @@ const Problem = () => {
             </Reveal>
           ))}
         </div>
+
+        {/* Photo strip — executive leadership contexts; replace with real program photos */}
+        <Reveal delay={0.18} className="mt-8">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
+            {[
+              { seed: "ceo-ai-boardroom-jakarta", label: "Executive strategy session" },
+              { seed: "leadership-ai-summit-singapore", label: "AI leadership summit" },
+              { seed: "digital-ceo-transformation-asia", label: "CEO transformation program" },
+            ].map((img, i) => (
+              <div key={i} className="relative overflow-hidden rounded-xl">
+                <img
+                  src={`https://picsum.photos/seed/${img.seed}/600/380`}
+                  alt={img.label}
+                  className="h-[190px] w-full object-cover transition-transform duration-700 hover:scale-105 md:h-[210px]"
+                  loading="lazy"
+                  style={{ filter: "saturate(0.6) brightness(0.68)" }}
+                />
+                <div
+                  aria-hidden
+                  className="absolute inset-0"
+                  style={{
+                    background:
+                      "linear-gradient(to top, rgba(7,14,28,0.62) 0%, rgba(7,14,28,0.12) 50%, transparent 100%)",
+                  }}
+                />
+              </div>
+            ))}
+          </div>
+        </Reveal>
       </Container>
     </section>
   );
