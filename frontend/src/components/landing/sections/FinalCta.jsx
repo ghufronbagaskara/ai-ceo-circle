@@ -100,7 +100,7 @@ const FinalCta = () => {
                 </Field>
                 <Field label="How can we help?" className="md:col-span-2">
                   <textarea rows={3} value={form.message} onChange={onChange("message")}
-                    placeholder="A few lines about your priority — what does success look like in 6 months?"
+                    placeholder="A few lines about your priority — what does success look like after AI CEO Circle?"
                     className="input resize-none" />
                 </Field>
 
