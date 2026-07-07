@@ -4,15 +4,20 @@ import { m } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Container from "@/components/landing/ui/Container";
 import MagneticButton from "@/components/landing/ui/MagneticButton";
-import LavaFlowBackdrop from "@/components/landing/ui/LavaFlowBackdrop";
 import AnimatedHeading from "@/components/landing/ui/AnimatedHeading";
 import { HERO, STATS_HERO } from "@/components/landing/data";
 
 const Hero = () => {
   return (
     <section id="top" className="relative isolate overflow-hidden min-h-[100svh] pt-20 pb-24 md:pt-24 md:pb-36">
-      <div aria-hidden className="pointer-events-none absolute inset-0 bg-[#070e1c]" />
-      <LavaFlowBackdrop />
+      <div aria-hidden className="pointer-events-none absolute inset-0 bg-[#070e1c] z-0">
+        <img 
+          src="/images/hero-bg.jpg" 
+          alt="Hero Background" 
+          className="w-full h-full object-cover opacity-65 filter blur-[2px] brightness-[0.65]"
+        />
+        <div className="absolute inset-0 bg-black/35" />
+      </div>
 
       {/* Status pill */}
       <Container className="relative z-10 pt-4 md:pt-10">
