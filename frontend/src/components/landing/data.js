@@ -126,7 +126,7 @@ export const PROGRAM = {
 
 export const TIMELINE = {
   label: "The format",
-  title: "A 6-month executive mentoring circle",
+  title: "A 4-month executive mentoring circle",
   intro:
     "Built for leaders who execute. Approximately 4–6 hours per month. Sessions fit executive schedules.",
   steps: [
