@@ -11,25 +11,25 @@ const convictions = [
     tag: "01",
     title: "Own your intelligence",
     body: "Software depreciates. Your operating know-how, judgment, and decision logic must be encoded into systems your company actually owns.",
-    photo: "https://picsum.photos/seed/ai-intelligence-own/700/500",
+    photo: "/images/program/program-1.png",
   },
   {
     tag: "02",
     title: "Liberate the leader",
     body: "Manual debt stalls CEOs. Eliminating operational friction at the top frees the leader to focus on capital, vision, and judgment.",
-    photo: "https://picsum.photos/seed/liberate-leader-ceo/700/500",
+    photo: "/images/program/program-2.png",
   },
   {
     tag: "03",
     title: "Encode know-how",
     body: "Models and tools will keep changing. Your unique way of operating must be encoded into executable workflows that can run, adapt, and scale.",
-    photo: "https://picsum.photos/seed/encode-knowledge-team/700/500",
+    photo: "/images/program/program-3.png",
   },
   {
     tag: "04",
     title: "Uncap growth",
     body: "Operational friction caps revenue far more than demand. Removing CEO-level bottlenecks compounds growth without proportional cost.",
-    photo: "https://picsum.photos/seed/uncap-growth-business/700/500",
+    photo: "/images/program/program-4.png",
   },
 ];
 
