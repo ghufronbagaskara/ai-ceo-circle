@@ -240,7 +240,7 @@ export const AFTERMATH = {
   intro:
     "Graduates unlock access to MAXY AI's full enterprise transformation ecosystem.",
   // TODO: replace with actual event/program photo (landscape, min 1200x500)
-  eventPhoto: "https://picsum.photos/seed/executive-ai-program-session/1200/500",
+  eventPhoto: "/images/after-ai-ceo-circle.png",
   steps: [
     {
       tag: "Step 2",
