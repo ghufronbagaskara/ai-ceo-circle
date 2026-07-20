@@ -22,8 +22,8 @@ export const NAV_LINKS = [
 
 export const HERO = {
   eyebrow: "AI CEO Circle · Powered by MAXY AI",
-  titleA: "Lead the AI era.",
-  titleB: "Don't just survive it.",
+  titleA: "AI CEO Circle.",
+  titleB: "Executive AI leadership.",
   description:
     "AI CEO Circle is MAXY AI's exclusive private executive mentoring program, where CEOs and senior business leaders in Indonesia and Singapore build their own AI agents and a Digital CEO Twin alongside practitioners who have already done it.",
   ctaPrimary: "Apply for the next cohort",
